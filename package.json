@@ -1,6 +1,6 @@
 {
   "name": "vitepress-component-medium-zoom",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "VitePress image preview component with medium-zoom support",
   "keywords": [
     "vitepress",
