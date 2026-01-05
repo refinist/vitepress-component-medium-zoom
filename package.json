@@ -46,7 +46,7 @@
     "lint": "eslint --cache .",
     "lint:fix": "pnpm run lint --fix",
     "prepublishOnly": "pnpm run build",
-    "release": "bumpp && pnpm publish",
+    "release": "bumpp",
     "typecheck": "vue-tsc --noEmit"
   },
   "prettier": "@refinist/prettier-config",
