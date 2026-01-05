@@ -9,7 +9,7 @@ VitePress image preview component
 - 🖼️ Click images to zoom in/out
 - 🔄 Automatically reinitialize on route changes
 - ⚙️ Customizable selector and options
-- 🎨 Built-in z-index styling for overlay
+- 🎨 Built-in z-index styling for overlay, can be customized with `--vp-medium-zoom-z-index` css variable
 
 ## Installation
 
@@ -119,19 +119,6 @@ Configuration options for medium-zoom. See the [medium-zoom documentation](https
     margin: 24
   }"
 />
-```
-
-### zIndex
-
-- **Type**: `number`
-- **Default**: `999`
-
-Customize the z-index value for the overlay and zoomed image.
-
-**Example:**
-
-```vue
-<MediumZoom :z-index="2000" />
 ```
 
 ## How It Works

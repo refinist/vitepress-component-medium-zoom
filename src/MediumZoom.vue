@@ -12,12 +12,10 @@ const props = withDefaults(
   defineProps<{
     selector?: ZoomSelector;
     options?: ZoomOptions;
-    zIndex?: number;
   }>(),
   {
     selector: '.vp-doc img',
-    options: () => ({}),
-    zIndex: 999
+    options: () => ({})
   }
 );
 
@@ -58,6 +56,6 @@ function setupMediumZoom() {
 /* https://github.com/francoischalifour/medium-zoom#debugging */
 .medium-zoom-overlay,
 .medium-zoom-image--opened {
-  z-index: v-bind(zIndex);
+  z-index: var(--vp-medium-zoom-z-index, 999);
 }
 </style>
