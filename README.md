@@ -84,6 +84,24 @@ Customize the image selector. This follows the [medium-zoom](https://github.com/
 <MediumZoom selector=".vp-doc img" />
 ```
 
+If you want to exclude certain images from zooming, you can use a custom data attribute and exclude them from the selector.
+
+```vue
+<MediumZoom selector=".vp-doc img:not([data-disable-zoom])" />
+```
+
+**Example:**
+
+```md
+![foo](./assets/foo.png){data-disable-zoom}
+```
+
+or
+
+```vue
+<img src="image.png" data-disable-zoom />
+```
+
 ### options
 
 - **Type**: `ZoomOptions`
@@ -103,22 +121,17 @@ Configuration options for medium-zoom. See the [medium-zoom documentation](https
 />
 ```
 
-If you want to exclude certain images from zooming, you can use a custom data attribute and exclude them from the selector.
+### zIndex
 
-```vue
-<MediumZoom selector=".vp-doc img:not([data-disable-zoom])" />
-```
+- **Type**: `number`
+- **Default**: `999`
+
+Customize the z-index value for the overlay and zoomed image.
 
 **Example:**
 
-```md
-![foo](./assets/foo.png){data-disable-zoom}
-```
-
-or
-
 ```vue
-<img src="image.png" data-disable-zoom />
+<MediumZoom :z-index="2000" />
 ```
 
 ## How It Works

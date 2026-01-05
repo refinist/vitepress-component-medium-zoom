@@ -84,6 +84,24 @@ vite: {
 <MediumZoom selector=".vp-doc img" />
 ```
 
+如果某些图像不要 zoom，可以自定义一个 data 值，然后从 selector 中排除掉。
+
+```vue
+<MediumZoom selector=".vp-doc img:not([data-disable-zoom])" />
+```
+
+**示例：**
+
+```md
+![foo](./assets/foo.png){data-disable-zoom}
+```
+
+或
+
+```vue
+<img src="image.png" data-disable-zoom />
+```
+
 ### options
 
 - **类型**: `ZoomOptions`
@@ -103,22 +121,17 @@ medium-zoom 的配置选项。查看 [medium-zoom 文档](https://github.com/fra
 />
 ```
 
-如果某些图像不要 zoom，可以自定义一个 data 值，然后从 selector 中排除掉。
+### zIndex
 
-```vue
-<MediumZoom selector=".vp-doc img:not([data-disable-zoom])" />
-```
+- **类型**: `number`
+- **默认值**: `999`
+
+自定义遮罩层和放大图片的 z-index 值。
 
 **示例：**
 
-```md
-![foo](./assets/foo.png){data-disable-zoom}
-```
-
-或
-
 ```vue
-<img src="image.png" data-disable-zoom />
+<MediumZoom :z-index="2000" />
 ```
 
 ## 工作原理
