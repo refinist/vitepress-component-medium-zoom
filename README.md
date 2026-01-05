@@ -52,7 +52,7 @@ const { Layout } = DefaultTheme;
 
 <template>
   <Layout>...</Layout>
-  <!-- Import here -->
+  <!-- Use here -->
   <MediumZoom />
 </template>
 ```
@@ -110,6 +110,12 @@ If you want to exclude certain images from zooming, you can use a custom data at
 ```
 
 **Example:**
+
+```md
+![foo](./assets/foo.png){data-disable-zoom}
+```
+
+or
 
 ```vue
 <img src="image.png" data-disable-zoom />

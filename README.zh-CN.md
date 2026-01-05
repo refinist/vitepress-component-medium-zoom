@@ -52,7 +52,7 @@ const { Layout } = DefaultTheme;
 
 <template>
   <Layout>...</Layout>
-  <!-- 在这里引入 -->
+  <!-- 在这里使用 -->
   <MediumZoom />
 </template>
 ```
@@ -110,6 +110,12 @@ medium-zoom 的配置选项。查看 [medium-zoom 文档](https://github.com/fra
 ```
 
 **示例：**
+
+```md
+![foo](./assets/foo.png){data-disable-zoom}
+```
+
+或
 
 ```vue
 <img src="image.png" data-disable-zoom />
