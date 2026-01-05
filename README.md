@@ -59,6 +59,16 @@ const { Layout } = DefaultTheme;
 
 **Note:** The component doesn't render any visible content, so you can place it anywhere in your layout. It will automatically handle image zooming for all images matching the selector.
 
+⚠️ **Important:** You need to add the following configuration to `.vitepress/config.ts`, otherwise the build will fail:
+
+```js
+vite: {
+  ssr: {
+    noExternal: ['vitepress-component-medium-zoom'];
+  }
+}
+```
+
 ## Props
 
 ### selector

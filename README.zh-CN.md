@@ -21,7 +21,7 @@ pnpm add vitepress-component-medium-zoom
 yarn add vitepress-component-medium-zoom
 ```
 
-## 使用方法
+## 使用
 
 参考 [VitePress Layout Slots](https://vitepress.dev/guide/extending-default-theme#layout-slots)，在布局中直接引入组件。
 
@@ -58,6 +58,16 @@ const { Layout } = DefaultTheme;
 ```
 
 **注意：** 该组件不会渲染任何可见内容，因此可以将其放置在布局的任何位置。它会自动处理所有匹配选择器的图片缩放功能。
+
+⚠️ **重要：** 需要把下面这个配置添加到 `.vitepress/config.ts` 中，否则构建会报错：
+
+```js
+vite: {
+  ssr: {
+    noExternal: ['vitepress-component-medium-zoom'];
+  }
+}
+```
 
 ## Props
 
