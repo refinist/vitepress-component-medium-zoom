@@ -1,0 +1,78 @@
+{
+  "name": "vitepress-component-medium-zoom",
+  "version": "0.0.0",
+  "description": "VitePress image preview component with medium-zoom support",
+  "keywords": [
+    "vitepress",
+    "medium-zoom",
+    "image",
+    "zoom",
+    "preview",
+    "vue",
+    "vue3",
+    "component",
+    "markdown"
+  ],
+  "homepage": "https://github.com/refinist/vitepress-component-medium-zoom#readme",
+  "bugs": {
+    "url": "https://github.com/refinist/vitepress-component-medium-zoom/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/refinist/vitepress-component-medium-zoom.git"
+  },
+  "license": "MIT",
+  "author": "REFINIST",
+  "sideEffects": [
+    "dist/index.css"
+  ],
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js",
+    "./style.css": "./dist/index.css",
+    "./index.css": "./dist/index.css",
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "format": "prettier --cache --write .",
+    "lint": "eslint --cache .",
+    "lint:fix": "pnpm run lint --fix",
+    "prepublishOnly": "pnpm run build",
+    "release": "bumpp",
+    "typecheck": "vue-tsc --noEmit"
+  },
+  "prettier": "@refinist/prettier-config",
+  "dependencies": {
+    "medium-zoom": "^1.1.0"
+  },
+  "devDependencies": {
+    "@refinist/eslint-config": "^1.0.7",
+    "@refinist/prettier-config": "^1.0.1",
+    "@vitejs/plugin-vue": "^6.0.3",
+    "bumpp": "^10.3.2",
+    "eslint": "^9.39.2",
+    "prettier": "^3.7.4",
+    "tsdown": "0.19.0-beta.2",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.0",
+    "vitepress": "^1.6.4",
+    "vue": "^3.5.26",
+    "vue-tsc": "^3.2.1"
+  },
+  "peerDependencies": {
+    "vitepress": "^1.0.0",
+    "vue": "^3.0.0"
+  },
+  "packageManager": "pnpm@10.27.0",
+  "publishConfig": {
+    "access": "public"
+  }
+}
