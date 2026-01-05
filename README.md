@@ -1,5 +1,7 @@
 # vitepress-component-medium-zoom
 
+[![npm](https://img.shields.io/npm/v/vitepress-component-medium-zoom.svg?colorA=41d1ff&colorB=bd34fe)](https://npmjs.com/package/vitepress-component-medium-zoom)
+
 English | [中文](./README.zh-CN.md)
 
 VitePress image preview component
