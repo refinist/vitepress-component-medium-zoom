@@ -9,7 +9,12 @@ VitePress 图片预览功能组件
 - 🖼️ 点击图片放大/缩小
 - 🔄 路由变化时自动重新初始化
 - ⚙️ 可自定义选择器和配置选项
-- 🎨 内置 z-index 样式，确保遮罩层正确显示，可通过 `--vp-medium-zoom-z-index` css 变量自定义
+- 🎨 内置 z-index 样式，确保遮罩层正确显示，可通过 `--vp-medium-zoom-z-index` css 变量自定义，例如：
+  ```css
+  :root {
+    --vp-medium-zoom-z-index: 1000;
+  }
+  ```
 
 ## 安装
 
